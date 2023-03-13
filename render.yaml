@@ -2,6 +2,7 @@ previewsEnabled: true
 previewsExpireAfterDays: 3
 services:
 - type: web
+  region: frankfurt
 #  plan: standard
   previewPlan: starter
   name: express-backend
@@ -17,6 +18,7 @@ services:
       name: postgres_db
       property: connectionString
 - type: web
+  region: frankfurt
   name: render-todo
   env: static
   buildCommand: cd frontend && yarn install && yarn build
@@ -29,6 +31,7 @@ services:
       property: host
 databases:
 - name: postgres_db
+  region: frankfurt
   databaseName: test_db
   user: test_user
 #  plan: standard
